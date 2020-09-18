@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+
+<head>
+<title>Test Project</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+
+<!-- Use this meta tag on your mobile page -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+<!-- Use these three includes on your pages under <head> section -->
+
+<link type="text/css" rel="stylesheet" href="imagerotator/html/css/basic.css"/>
+<script type="text/javascript" src="imagerotator/html/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="imagerotator/html/js/imagerotator.js"></script>
+
+
+<style type= "text/css">
+
+html, body
+{
+    padding: 0;
+    margin: 0;
+}
+
+/*-- Use #content CSS to customize size, position, border, etc of your 360 view --*/
+
+#content
+{
+    width: 100%;
+    height: 450px;
+    /* border: 1px dotted #cecfd2; */
+}
+
+</style>
+
+
+<!-- Copy this script block and paste under your page <head> section or somewhere inside your page <body> -->
+
+<script language="javascript" type="text/javascript">
+function initializeAPIDemo(api){
+$("#playToLabel").click(function(e){
+    e.preventDefault();
+    api.images.playToLabel(
+        // Label name as specified in SpotEditor under Images->List
+        "side",
+        // Configurable playback speed (period). Period represents the number of seconds it takes to make full 360 degree spin.
+        1,
+        // Optional callback which is called when label is reached.
+        function(side){
+            alert("Reached label: " + labelName);
+        });
+});
+$("#jumpToLabel").click(function(e){
+    e.preventDefault();
+    api.images.jumpToLabel("front");
+});
+}
+jQuery(document).ready(function(){
+
+    jQuery('#wr360PlayerId').rotator({
+        licenseFileURL: 'license.lic',
+		configFileURL: '360_assets/Test Project/Test Project.xml',
+		graphicsPath: 'imagerotator/html/img/basic',
+        alt: '360 degree view - Test Project',
+        responsiveBaseWidth: 600,
+        responsiveMinHeight: 0,
+        googleEventTracking: false,
+    });
+
+});
+
+</script>
+
+<!-- End of script copy / paste -->
+
+
+</head>
+
+
+
+<body>
+
+    <div class="responsive-wrapper-demo-do-not-copy" style="max-width:600px;">
+
+        <!-- Just copy / paste the content div below onto your page and define content CSS styles as needed -->
+
+        <div id="content">
+
+            <div id="wr360PlayerId" class="wr360_player" style="background-color:#FFFFFF;">
+            </div>
+
+        </div>
+
+    </div>
+<ul>
+<li><a href="#" id="playToLabel">playToLabel</a> (<i>Example label is "play". Create one first in SpotEditor under Images->List</i>)</li>
+<li><a href="#" id="jumpToLabel">jumpToLabel</a> (<i>Example label is "play". Create one first in SpotEditor under Images->List</i>)</li>
+</ul>
+
+</body>
+
+</html>
