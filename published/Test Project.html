@@ -46,11 +46,8 @@ $("#playToLabel").click(function(e){
         // Label name as specified in SpotEditor under Images->List
         "side",
         // Configurable playback speed (period). Period represents the number of seconds it takes to make full 360 degree spin.
-        1,
-        // Optional callback which is called when label is reached.
-        function(side){
-            alert("Reached label: " + labelName);
-        });
+        1
+
 });
 $("#jumpToLabel").click(function(e){
     e.preventDefault();
@@ -67,6 +64,11 @@ jQuery(document).ready(function(){
         responsiveBaseWidth: 600,
         responsiveMinHeight: 0,
         googleEventTracking: false,
+        apiReadyCallback: function(api, isFullScreen){
+            // apiReadyCallback is also called when user enters full-screen which creates a separate viewer object.
+            if (!isFullScreen)
+                initializeAPIDemo(api);
+        },
     });
 
 });
