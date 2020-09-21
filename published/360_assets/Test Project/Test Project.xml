@@ -7,18 +7,21 @@
     <rotation firstImage="0" rotate="false" rotatePeriod="7" bounce="false" rotateDirection="-1" forceDirection="false" inertiaRelToDragSpeed="true" inertiaTimeToStop="700" inertiaMaxInterval="120" useInertia="true" flipHorizontalInput="false" flipVerticalInput="false" bounceRows="true" rowsOnSingleIndex="false" flipAxis="false" />
   </settings>
   <hotspots>
-    <hotspot id="spot1" renderMode="1" indicatorImage="geo-short-green.svg" activateOnClick="true" effects="scaleUp">
-      <spotinfo />
+    <hotspot id="spot1" renderMode="1" indicatorImage="geo-short-green.svg" activateOnClick="true" effects="scaleUp" offsetX="0" offsetY="0">
+      <spotinfo txt="This is the &lt;b&gt;front&lt;/b&gt; of the product." css="color:#333333;width:200px;padding:15px 15px;border:1px solid #EEEEEE;background-color:rgba(255,255,255,1);" />
     </hotspot>
     <hotspot id="spot2" renderMode="0" indicatorImage="circ-cross-thin-blue.svg" effects="scaleUp">
-      <spotinfo txt="This is a hot spot" css="color:#333333;width:200px;padding:15px 15px;border:1px solid #EEEEEE;background-color:rgba(255,255,255,1);" />
+      <spotinfo txt="This is a side view &lt;b&gt;hot spot&lt;/b&gt;." css="color:#333333;width:200px;padding:15px 15px;border:1px solid #EEEEEE;background-color:rgba(255,255,255,1);" />
     </hotspot>
     <hotspot id="spot3" renderMode="0" indicatorImage="circ-cross-thin-blue.svg" effects="scaleUp">
-      <spotinfo />
+      <spotinfo txt="&lt;b&gt;Rear view&lt;/b&gt; of the product." css="color:#333333;width:200px;padding:15px 15px;border:1px solid #EEEEEE;background-color:rgba(255,255,255,1);" />
+    </hotspot>
+    <hotspot id="spot4" renderMode="0" indicatorImage="circ-cross-thin-blue.svg">
+      <spotinfo txt="[Insert some information about the product]." css="color:#333333;width:200px;padding:15px 15px;border:1px solid #EEEEEE;background-color:rgba(255,255,255,1);" />
     </hotspot>
   </hotspots>
   <images rows="1" highresWidth="725" highresHeight="545">
-    <image src="images/Interactive_overlay_R1_00000.jpg" label="side">
+    <image src="images/Interactive_overlay_R1_00000.jpg">
       <hotspot source="spot1" offsetX="687" offsetY="-138" />
       <highres src="images/highres/Interactive_overlay_R1_00000.jpg" />
     </image>
@@ -34,7 +37,8 @@
     <image src="images/Interactive_overlay_R1_00004.jpg">
       <highres src="images/highres/Interactive_overlay_R1_00004.jpg" />
     </image>
-    <image src="images/Interactive_overlay_R1_00005.jpg">
+    <image src="images/Interactive_overlay_R1_00005.jpg" label="side">
+      <hotspot source="spot2" offsetX="164" offsetY="209" />
       <highres src="images/highres/Interactive_overlay_R1_00005.jpg" />
     </image>
     <image src="images/Interactive_overlay_R1_00006.jpg">
@@ -52,17 +56,17 @@
     <image src="images/Interactive_overlay_R1_00010.jpg">
       <highres src="images/highres/Interactive_overlay_R1_00010.jpg" />
     </image>
-    <image src="images/Interactive_overlay_R1_00011.jpg" label="front">
-      <hotspot source="spot2" offsetX="277" offsetY="233" />
+    <image src="images/Interactive_overlay_R1_00011.jpg">
       <highres src="images/highres/Interactive_overlay_R1_00011.jpg" />
     </image>
-    <image src="images/Interactive_overlay_R1_00012.jpg">
+    <image src="images/Interactive_overlay_R1_00012.jpg" label="front">
+      <hotspot source="spot1" offsetX="360" offsetY="314" />
       <highres src="images/highres/Interactive_overlay_R1_00012.jpg" />
     </image>
     <image src="images/Interactive_overlay_R1_00013.jpg">
       <highres src="images/highres/Interactive_overlay_R1_00013.jpg" />
     </image>
-    <image src="images/Interactive_overlay_R1_00014.jpg">
+    <image src="images/Interactive_overlay_R1_00014.jpg" label="angledleft">
       <highres src="images/highres/Interactive_overlay_R1_00014.jpg" />
     </image>
     <image src="images/Interactive_overlay_R1_00015.jpg">
@@ -75,7 +79,6 @@
       <highres src="images/highres/Interactive_overlay_R1_00017.jpg" />
     </image>
     <image src="images/Interactive_overlay_R1_00018.jpg">
-      <hotspot source="spot1" offsetX="331" offsetY="211" />
       <highres src="images/highres/Interactive_overlay_R1_00018.jpg" />
     </image>
     <image src="images/Interactive_overlay_R1_00019.jpg">
@@ -87,7 +90,8 @@
     <image src="images/Interactive_overlay_R1_00021.jpg">
       <highres src="images/highres/Interactive_overlay_R1_00021.jpg" />
     </image>
-    <image src="images/Interactive_overlay_R1_00022.jpg">
+    <image src="images/Interactive_overlay_R1_00022.jpg" label="rear">
+      <hotspot source="spot3" offsetX="275" offsetY="147" />
       <highres src="images/highres/Interactive_overlay_R1_00022.jpg" />
     </image>
     <image src="images/Interactive_overlay_R1_00023.jpg">
@@ -114,7 +118,8 @@
     <image src="images/Interactive_overlay_R1_00030.jpg">
       <highres src="images/highres/Interactive_overlay_R1_00030.jpg" />
     </image>
-    <image src="images/Interactive_overlay_R1_00031.jpg">
+    <image src="images/Interactive_overlay_R1_00031.jpg" label="angledright">
+      <hotspot source="spot4" offsetX="411" offsetY="257" />
       <highres src="images/highres/Interactive_overlay_R1_00031.jpg" />
     </image>
   </images>

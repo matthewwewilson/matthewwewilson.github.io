@@ -39,22 +39,53 @@ html, body
 <!-- Copy this script block and paste under your page <head> section or somewhere inside your page <body> -->
 
 <script language="javascript" type="text/javascript">
+
+<script language="javascript" type="text/javascript">
 function initializeAPIDemo(api){
-$("#playToLabel").click(function(e){
+$("#playToFront").click(function(e){
+    e.preventDefault();
+    api.images.playToLabel(
+        // Label name as specified in SpotEditor under Images->List
+        "front",
+        // Configurable playback speed (period). Period represents the number of seconds it takes to make full 360 degree spin.
+        1,
+        );
+});
+$("#playToRear").click(function(e){
+    e.preventDefault();
+    api.images.playToLabel(
+        // Label name as specified in SpotEditor under Images->List
+        "rear",
+        // Configurable playback speed (period). Period represents the number of seconds it takes to make full 360 degree spin.
+        1,
+        );
+});
+$("#playToSide").click(function(e){
     e.preventDefault();
     api.images.playToLabel(
         // Label name as specified in SpotEditor under Images->List
         "side",
         // Configurable playback speed (period). Period represents the number of seconds it takes to make full 360 degree spin.
         1,
-        // Optional callback which is called when label is reached.
-        function(side){
-            alert("Reached label: " + labelName);
-        });
+        );
 });
-$("#jumpToLabel").click(function(e){
+$("#playToAngledLeft").click(function(e){
     e.preventDefault();
-    api.images.jumpToLabel("front");
+    api.images.playToLabel(
+        // Label name as specified in SpotEditor under Images->List
+        "angledleft",
+        // Configurable playback speed (period). Period represents the number of seconds it takes to make full 360 degree spin.
+        1,
+        );
+});
+$("#playToAngledRight").click(function(e){
+    e.preventDefault();
+    api.images.playToLabel(
+        // Label name as specified in SpotEditor under Images->List
+        "angledright",
+        // Configurable playback speed (period). Period represents the number of seconds it takes to make full 360 degree spin.
+        1,
+        );
 });
 }
 jQuery(document).ready(function(){
@@ -67,6 +98,11 @@ jQuery(document).ready(function(){
         responsiveBaseWidth: 600,
         responsiveMinHeight: 0,
         googleEventTracking: false,
+        apiReadyCallback: function(api, isFullScreen){
+            // apiReadyCallback is also called when user enters full-screen which creates a separate viewer object.
+            if (!isFullScreen)
+                initializeAPIDemo(api);
+        },
     });
 
 });
@@ -94,10 +130,13 @@ jQuery(document).ready(function(){
         </div>
 
     </div>
-<ul>
-<li><a href="#" id="playToLabel">playToLabel</a> (<i>Example label is "play". Create one first in SpotEditor under Images->List</i>)</li>
-<li><a href="#" id="jumpToLabel">jumpToLabel</a> (<i>Example label is "play". Create one first in SpotEditor under Images->List</i>)</li>
-</ul>
+    <ul>
+    <li><a href="#" id="playToFront">Play to Front Hotspot</a></li>
+    <li><a href="#" id="playToRear">Play to Rear Hotspot</a></li>
+    <li><a href="#" id="playToSide">Play to Side Hotspot</a></li>
+    <li><a href="#" id="playToAngledLeft">Play to Left Angled Hotspot</a></li>
+    <li><a href="#" id="playToAngledRight">Play to Right Angled Hotspot</a></li>
+    </ul>
 
 </body>
 
