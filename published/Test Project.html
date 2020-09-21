@@ -47,8 +47,9 @@ $("#playToFront").click(function(e){
         "front",
         // Configurable playback speed (period). Period represents the number of seconds it takes to make full 360 degree spin.
         1,
-        );
         api.hotspots.activate("spot1", 4000 /* 4000 is an example timeout before the hotspot deactivates itself */);
+        );
+
 });
 $("#playToRear").click(function(e){
     e.preventDefault();
@@ -67,8 +68,9 @@ $("#playToSide").click(function(e){
         "side",
         // Configurable playback speed (period). Period represents the number of seconds it takes to make full 360 degree spin.
         1,
-        );
         api.hotspots.activate("spot3", 4000 /* 4000 is an example timeout before the hotspot deactivates itself */);
+        );
+
 });
 $("#playToAngledLeft").click(function(e){
     e.preventDefault();
@@ -86,8 +88,9 @@ $("#playToAngledRight").click(function(e){
         "angledright",
         // Configurable playback speed (period). Period represents the number of seconds it takes to make full 360 degree spin.
         1,
-        );
         api.hotspots.activate("spot4", 4000 /* 4000 is an example timeout before the hotspot deactivates itself */);
+        );
+
 });
 }
 jQuery(document).ready(function(){
