@@ -47,7 +47,8 @@ $("#playToFront").click(function(e){
         "front",
         // Configurable playback speed (period). Period represents the number of seconds it takes to make full 360 degree spin.
         1,
-        api.hotspots.activate("spot1", 4000 /* 4000 is an example timeout before the hotspot deactivates itself */),
+        function() {
+        api.hotspots.activate("spot1", 4000 /* 4000 is an example timeout before the hotspot deactivates itself */)},
         );
 
 });
@@ -58,8 +59,10 @@ $("#playToRear").click(function(e){
         "rear",
         // Configurable playback speed (period). Period represents the number of seconds it takes to make full 360 degree spin.
         1,
+        function() {
+        api.hotspots.activate("spot2", 4000 /* 4000 is an example timeout before the hotspot deactivates itself */)},
         );
-        api.hotspots.activate("spot2", 4000 /* 4000 is an example timeout before the hotspot deactivates itself */),
+
 });
 $("#playToSide").click(function(e){
     e.preventDefault();
@@ -68,7 +71,8 @@ $("#playToSide").click(function(e){
         "side",
         // Configurable playback speed (period). Period represents the number of seconds it takes to make full 360 degree spin.
         1,
-        api.hotspots.activate("spot3", 4000 /* 4000 is an example timeout before the hotspot deactivates itself */),
+        function() {
+          api.hotspots.activate("spot3", 4000 /* 4000 is an example timeout before the hotspot deactivates itself */)},
         );
 
 });
@@ -88,7 +92,9 @@ $("#playToAngledRight").click(function(e){
         "angledright",
         // Configurable playback speed (period). Period represents the number of seconds it takes to make full 360 degree spin.
         1,
-        api.hotspots.activate("spot4", 4000 /* 4000 is an example timeout before the hotspot deactivates itself */),
+        function() {
+          api.hotspots.activate("spot4", 4000 /* 4000 is an example timeout before the hotspot deactivates itself */);
+        },
         );
 
 });
