@@ -42,6 +42,7 @@ html, body
 function initializeAPIDemo(api){
 $("#playToFront").click(function(e){
     e.preventDefault();
+    deactivateHotspots();
     api.images.playToLabel(
         // Label name as specified in SpotEditor under Images->List
         "front",
@@ -54,6 +55,7 @@ $("#playToFront").click(function(e){
 });
 $("#playToRear").click(function(e){
     e.preventDefault();
+    deactivateHotspots();
     api.images.playToLabel(
         // Label name as specified in SpotEditor under Images->List
         "rear",
@@ -66,6 +68,7 @@ $("#playToRear").click(function(e){
 });
 $("#playToSide").click(function(e){
     e.preventDefault();
+    deactivateHotspots();
     api.images.playToLabel(
         // Label name as specified in SpotEditor under Images->List
         "side",
@@ -78,6 +81,7 @@ $("#playToSide").click(function(e){
 });
 $("#playToAngledLeft").click(function(e){
     e.preventDefault();
+    deactivateHotspots();
     api.images.playToLabel(
         // Label name as specified in SpotEditor under Images->List
         "angledleft",
@@ -87,6 +91,7 @@ $("#playToAngledLeft").click(function(e){
 });
 $("#playToAngledRight").click(function(e){
     e.preventDefault();
+    deactivateHotspots();
     api.images.playToLabel(
         // Label name as specified in SpotEditor under Images->List
         "angledright",
@@ -98,6 +103,12 @@ $("#playToAngledRight").click(function(e){
         );
 
 });
+function deactivateHotspots() {
+  api.hotspots.deactivate('spot1');
+  api.hotspots.deactivate('spot2');
+  api.hotspots.deactivate('spot3');
+  api.hotspots.deactivate('spot4');
+}
 }
 jQuery(document).ready(function(){
 
