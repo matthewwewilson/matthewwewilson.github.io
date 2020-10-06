@@ -39,77 +39,7 @@ html, body
 <!-- Copy this script block and paste under your page <head> section or somewhere inside your page <body> -->
 
 <script language="javascript" type="text/javascript">
-function initializeAPIDemo(api){
-$("#playToFront").click(function(e){
-    e.preventDefault();
-    deactivateHotspots();
-    api.images.playToLabel(
-        // Label name as specified in SpotEditor under Images->List
-        "front",
-        // Configurable playback speed (period). Period represents the number of seconds it takes to make full 360 degree spin.
-        1,
-        function() {
-        api.hotspots.activate("spot1", 4000 /* 4000 is an example timeout before the hotspot deactivates itself */)},
-        );
 
-});
-$("#playToRear").click(function(e){
-    e.preventDefault();
-    deactivateHotspots();
-    api.images.playToLabel(
-        // Label name as specified in SpotEditor under Images->List
-        "rear",
-        // Configurable playback speed (period). Period represents the number of seconds it takes to make full 360 degree spin.
-        1,
-        function() {
-        api.hotspots.activate("spot2", 4000 /* 4000 is an example timeout before the hotspot deactivates itself */)},
-        );
-
-});
-$("#playToSide").click(function(e){
-    e.preventDefault();
-    deactivateHotspots();
-    api.images.playToLabel(
-        // Label name as specified in SpotEditor under Images->List
-        "side",
-        // Configurable playback speed (period). Period represents the number of seconds it takes to make full 360 degree spin.
-        1,
-        function() {
-          api.hotspots.activate("spot3", 4000 /* 4000 is an example timeout before the hotspot deactivates itself */)},
-        );
-
-});
-$("#playToAngledLeft").click(function(e){
-    e.preventDefault();
-    deactivateHotspots();
-    api.images.playToLabel(
-        // Label name as specified in SpotEditor under Images->List
-        "angledleft",
-        // Configurable playback speed (period). Period represents the number of seconds it takes to make full 360 degree spin.
-        1,
-        );
-});
-$("#playToAngledRight").click(function(e){
-    e.preventDefault();
-    deactivateHotspots();
-    api.images.playToLabel(
-        // Label name as specified in SpotEditor under Images->List
-        "angledright",
-        // Configurable playback speed (period). Period represents the number of seconds it takes to make full 360 degree spin.
-        1,
-        function() {
-          api.hotspots.activate("spot4", 4000 /* 4000 is an example timeout before the hotspot deactivates itself */);
-        },
-        );
-
-});
-function deactivateHotspots() {
-  api.hotspots.deactivate('spot1');
-  api.hotspots.deactivate('spot2');
-  api.hotspots.deactivate('spot3');
-  api.hotspots.deactivate('spot4');
-}
-}
 jQuery(document).ready(function(){
 
     jQuery('#wr360PlayerId').rotator({
@@ -120,11 +50,6 @@ jQuery(document).ready(function(){
         responsiveBaseWidth: 600,
         responsiveMinHeight: 0,
         googleEventTracking: false,
-        apiReadyCallback: function(api, isFullScreen){
-            // apiReadyCallback is also called when user enters full-screen which creates a separate viewer object.
-            if (!isFullScreen)
-                initializeAPIDemo(api);
-        },
     });
 
 });
@@ -140,7 +65,7 @@ jQuery(document).ready(function(){
 
 <body>
 
-    <div class="responsive-wrapper-demo-do-not-copy" style="max-width:600px;">
+    <div class="responsive-wrapper-demo-do-not-copy" style="max-width:600px;">    
 
         <!-- Just copy / paste the content div below onto your page and define content CSS styles as needed -->
 
@@ -151,14 +76,8 @@ jQuery(document).ready(function(){
 
         </div>
 
-    </div>
-    <ul>
-    <li><a href="#" id="playToFront">Play to Front Hotspot</a></li>
-    <li><a href="#" id="playToRear">Play to Rear Hotspot</a></li>
-    <li><a href="#" id="playToSide">Play to Side Hotspot</a></li>
-    <li><a href="#" id="playToAngledLeft">Play to Left Angled Hotspot</a></li>
-    <li><a href="#" id="playToAngledRight">Play to Right Angled Hotspot</a></li>
-    </ul>
+    </div>    
+
 
 </body>
 
