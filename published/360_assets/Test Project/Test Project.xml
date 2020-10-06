@@ -22,38 +22,48 @@
   </hotspots>
   <images rows="1" highresWidth="725" highresHeight="545">
     <image src="images/Interactive_overlay_R1_00000.jpg">
-      <hotspot source="spot1" offsetX="687" offsetY="-138" />
+      <hotspot source="spot1" offsetX="407" offsetY="258" />
       <highres src="images/highres/Interactive_overlay_R1_00000.jpg" />
     </image>
     <image src="images/Interactive_overlay_R1_00001.jpg">
+      <hotspot source="spot1" offsetX="409" offsetY="254" />
       <highres src="images/highres/Interactive_overlay_R1_00001.jpg" />
     </image>
     <image src="images/Interactive_overlay_R1_00002.jpg">
+      <hotspot source="spot1" offsetX="421" offsetY="257" />
       <highres src="images/highres/Interactive_overlay_R1_00002.jpg" />
     </image>
     <image src="images/Interactive_overlay_R1_00003.jpg">
+      <hotspot source="spot1" offsetX="440" offsetY="254" />
       <highres src="images/highres/Interactive_overlay_R1_00003.jpg" />
     </image>
     <image src="images/Interactive_overlay_R1_00004.jpg">
+      <hotspot source="spot1" offsetX="458" offsetY="254" />
       <highres src="images/highres/Interactive_overlay_R1_00004.jpg" />
     </image>
     <image src="images/Interactive_overlay_R1_00005.jpg" label="side">
-      <hotspot source="spot2" offsetX="164" offsetY="209" />
+      <hotspot source="spot1" offsetX="478" offsetY="240" />
+      <hotspot source="spot2" offsetX="163" offsetY="209" />
       <highres src="images/highres/Interactive_overlay_R1_00005.jpg" />
     </image>
     <image src="images/Interactive_overlay_R1_00006.jpg">
+      <hotspot source="spot1" offsetX="490" offsetY="225" />
       <highres src="images/highres/Interactive_overlay_R1_00006.jpg" />
     </image>
     <image src="images/Interactive_overlay_R1_00007.jpg">
+      <hotspot source="spot1" offsetX="490" offsetY="214" />
       <highres src="images/highres/Interactive_overlay_R1_00007.jpg" />
     </image>
     <image src="images/Interactive_overlay_R1_00008.jpg">
+      <hotspot source="spot1" offsetX="479" offsetY="206" />
       <highres src="images/highres/Interactive_overlay_R1_00008.jpg" />
     </image>
     <image src="images/Interactive_overlay_R1_00009.jpg">
+      <hotspot source="spot1" offsetX="458" offsetY="201" />
       <highres src="images/highres/Interactive_overlay_R1_00009.jpg" />
     </image>
     <image src="images/Interactive_overlay_R1_00010.jpg">
+      <hotspot source="spot1" offsetX="429" offsetY="191" />
       <highres src="images/highres/Interactive_overlay_R1_00010.jpg" />
     </image>
     <image src="images/Interactive_overlay_R1_00011.jpg">
@@ -95,31 +105,39 @@
       <highres src="images/highres/Interactive_overlay_R1_00022.jpg" />
     </image>
     <image src="images/Interactive_overlay_R1_00023.jpg">
+      <hotspot source="spot1" offsetX="230" offsetY="251" />
       <highres src="images/highres/Interactive_overlay_R1_00023.jpg" />
     </image>
     <image src="images/Interactive_overlay_R1_00024.jpg">
+      <hotspot source="spot1" offsetX="284" offsetY="250" />
       <highres src="images/highres/Interactive_overlay_R1_00024.jpg" />
     </image>
     <image src="images/Interactive_overlay_R1_00025.jpg">
+      <hotspot source="spot1" offsetX="328" offsetY="249" />
       <highres src="images/highres/Interactive_overlay_R1_00025.jpg" />
     </image>
     <image src="images/Interactive_overlay_R1_00026.jpg">
+      <hotspot source="spot1" offsetX="362" offsetY="245" />
       <highres src="images/highres/Interactive_overlay_R1_00026.jpg" />
     </image>
     <image src="images/Interactive_overlay_R1_00027.jpg">
+      <hotspot source="spot1" offsetX="386" offsetY="252" />
       <highres src="images/highres/Interactive_overlay_R1_00027.jpg" />
     </image>
     <image src="images/Interactive_overlay_R1_00028.jpg">
+      <hotspot source="spot1" offsetX="400" offsetY="253" />
       <highres src="images/highres/Interactive_overlay_R1_00028.jpg" />
     </image>
     <image src="images/Interactive_overlay_R1_00029.jpg">
+      <hotspot source="spot1" offsetX="407" offsetY="258" />
       <highres src="images/highres/Interactive_overlay_R1_00029.jpg" />
     </image>
     <image src="images/Interactive_overlay_R1_00030.jpg">
+      <hotspot source="spot1" offsetX="407" offsetY="258" />
       <highres src="images/highres/Interactive_overlay_R1_00030.jpg" />
     </image>
     <image src="images/Interactive_overlay_R1_00031.jpg" label="angledright">
-      <hotspot source="spot4" offsetX="411" offsetY="257" />
+      <hotspot source="spot4" offsetX="407" offsetY="258" />
       <highres src="images/highres/Interactive_overlay_R1_00031.jpg" />
     </image>
   </images>
