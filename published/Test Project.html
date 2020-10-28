@@ -87,11 +87,7 @@ function initializeAPIDemo(api){
           // Label name as specified in SpotEditor under Images->List
           "angledleft",
           // Configurable playback speed (period). Period represents the number of seconds it takes to make full 360 degree spin.
-          10,
-          // Optional callback which is called when label is reached.
-          function(labelName){
-              alert("Reached label: " + labelName);
-          });
+          10);
   });
   $("#activate").click(function(e){
       e.preventDefault();
